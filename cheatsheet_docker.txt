@@ -1,0 +1,30 @@
+// Redeploy a deployment
+
+	kubectl get deployments
+ 		=> look at the name of the deploymment you want to restart
+	kubectl rollout restart deployment {name of deployment}
+
+// Deployment file changed
+	kubectl get services
+		=> check available ports
+	kubectl apply -f {filename of deployment}
+
+
+// Grpc server client relation
+	// Grpc Server
+	dotnet add package Grpc.AspNetCore
+
+	// Grpc Client
+	dotnet add package Grpc.Tools
+	dotnet add package Grpc.Net.Client
+	dotnet add package Google.Protobuf
+
+
+
+// Moving forward
+	=> HTTPS & TLS usage
+	=> Revisit Event Processor / Eventing
+		=> One big component and really simple
+	=> Service discovery
+		=> no hardcoded endpoints
+			=> sync messaging?
